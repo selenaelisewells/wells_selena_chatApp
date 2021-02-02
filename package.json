@@ -1,0 +1,19 @@
+{
+    "name": "selchatapp",
+    "version": "1.0.0",
+    "description": "a fun node build to create a chat",
+    "main": "app.js",
+    "scripts": {
+        "start-dev": "nodemon app",
+        "watch": "browser-sync start --proxy 'localhost:5050' --files '*.html' 'public'",
+        "start": "node app"
+    },
+    "keywords": [],
+    "author": "Selena Wells",
+    "license": "ISC",
+    "dependencies": {
+        "browser-sync": "^2.26.14",
+        "express": "^4.17.1",
+        "socket.io": "^3.1.0"
+    }
+}
