@@ -3,9 +3,8 @@ export default {
 
     template: `
     <article>
-        <h1>This is a message</h1>
-        <h4>{{message.message.name}} says:</h4>
-        <p>{{message.message.content}}</p>
+        <h4 class="sender">{{message.message.name}}</h4>
+        <p class="messageSent">{{message.message.content}}</p>
     </article>
     `
 }

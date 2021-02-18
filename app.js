@@ -13,9 +13,9 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"));
 });
 
-app.get("/chat", (req, res) => {
-    res.sendFile(path.join(__dirname, "chat.html"));
-});
+// app.get("/chat", (req, res) => {
+//     res.sendFile(path.join(__dirname, "chat.html"));
+// });
 
 const server = app.listen(port, () => {
     console.log(`app is running on ${port}`);
@@ -33,7 +33,7 @@ messenger.on('connection', (socket) => {
 
     socket.on('chatmessage', function(message) {
         console.log(message);
-        messenger.emit('message'), { id: socket.id, message: message }
+        messenger.emit('message', { id: socket.id, message: message })
     });
 
     socket.on("disconnect", () => {
